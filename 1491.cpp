@@ -17,13 +17,10 @@ long long ans;
 void dfs(int u)
 {
     if (u == n)
-    {
-        buf[0] = buf[n];
-        for (int i = 1; i <= n; i++)
-            if (fr[buf[i]][buf[i - 1]])
-                return;
+    {           
+        if (!fr[buf[n]][buf[1]])
+            ans++;
 
-        ans++;
         return;
     }
 
